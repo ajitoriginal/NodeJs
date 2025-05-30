@@ -2,7 +2,6 @@ const http = require('http')
 const dt = require('./myFirstModule')
 const url = require('url')
 const fs = require('fs')
-
 //demo_basic_server
 // http.createServer(function (req, res) {
 //     res.writeHead(200, {'Content-Type': 'text/html'})
@@ -96,20 +95,20 @@ const fs = require('fs')
 // }).listen(8080)
 
 //demo_fileserver
-http.createServer(function (req, res) {
-    const q = url.parse(req.url, true)
-    console.log('q: ', q)
-    const fileName = "." + q.pathname
-    console.log('fileName: ', fileName)
-    fs.readFile(fileName, function(err, data) {
-        if(err) {
-            res.writeHead(404, {'Content-Type': 'text/html'})
-            res.write('404 not found')
-            return res.end()
-        }
-        res.writeHead(200, {'Content-Type': 'text/html'})
-        res.write(data)
-        return res.end()
-    })
+// http.createServer(function (req, res) {
+//     const q = url.parse(req.url, true)
+//     console.log('q: ', q)
+//     const fileName = "." + q.pathname
+//     console.log('fileName: ', fileName)
+//     fs.readFile(fileName, function(err, data) {
+//         if(err) {
+//             res.writeHead(404, {'Content-Type': 'text/html'})
+//             res.write('404 not found')
+//             return res.end()
+//         }
+//         res.writeHead(200, {'Content-Type': 'text/html'})
+//         res.write(data)
+//         return res.end()
+//     })
     
-}).listen(8080)
+// }).listen(8080)
