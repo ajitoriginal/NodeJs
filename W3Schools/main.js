@@ -76,10 +76,40 @@ const fs = require('fs')
 // }).listen(8080)
 
 //demo_renamefile
+// http.createServer(function (req, res) {
+//     fs.rename('mynewfile5.txt', 'mynewfile5renamed.txt', function (err, data) {
+//         if(err) throw err
+//         res.write('File Renamed!')
+//         return res.end()
+//     })
+// }).listen(8080)
+
+//url module
+// http.createServer(function (req, res) {
+//     const q = url.parse(req.url, true)
+//     console.log('q: ', q)
+//     console.log('q host: ', q.host)
+//     console.log('q pathname: ', q.pathname)
+//     console.log('q query: ', q.query)
+//     console.log('q search: ', q.search)
+//     res.end('All good')
+// }).listen(8080)
+
+//demo_fileserver
 http.createServer(function (req, res) {
-    fs.rename('mynewfile5.txt', 'mynewfile5renamed.txt', function (err, data) {
-        if(err) throw err
-        res.write('File Renamed!')
+    const q = url.parse(req.url, true)
+    console.log('q: ', q)
+    const fileName = "." + q.pathname
+    console.log('fileName: ', fileName)
+    fs.readFile(fileName, function(err, data) {
+        if(err) {
+            res.writeHead(404, {'Content-Type': 'text/html'})
+            res.write('404 not found')
+            return res.end()
+        }
+        res.writeHead(200, {'Content-Type': 'text/html'})
+        res.write(data)
         return res.end()
     })
+    
 }).listen(8080)
