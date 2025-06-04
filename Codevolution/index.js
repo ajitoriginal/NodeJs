@@ -1,31 +1,15 @@
-// const add = require('./add')
-// console.log('Hello from index.js')
-// const sum = add(1,4)
-// console.log('sum:', sum)
+const EventEmitter = require('node:events')
 
-const path = require("path")
+const emitter = new EventEmitter()
 
-console.log(`dirname: ${__dirname}`)
-console.log(`filename: ${__filename}`)
+emitter.on('order-burger', (size, flavour, quantity) => {
+    console.log(`Order received! Baking ${quantity} ${size} burger with ${flavour} flavour`)
+})
 
-console.log(`path basename dirname: ${path.basename(__dirname)}`)
-console.log(`path basename filename: ${path.basename(__filename)}`)
+emitter.on('order-burger', () => {
+    console.log(`Order received! Another event listener`)
+})
 
-console.log(`path extname dirname: ${path.extname(__dirname)}`)
-console.log(`path extname filename: ${path.extname(__filename)}`)
+console.log('Do work before event occurs')
 
-console.log('path parse filename:', path.parse(__filename))
-
-console.log('path format parse filename:', path.format(path.parse(__filename)))
-
-console.log('path isAbsolute filename:', path.isAbsolute(__filename))
-console.log('path isAbsolute filename:', path.isAbsolute('./data.json'))
-
-console.log('path join:', path.join('folder1', 'folder2', 'index.html'))
-console.log('path join:', path.join(__dirname, 'text.js'))
-
-console.log('path resolve:', path.resolve('folder1', 'folder2', 'index.html'))
-console.log('path resolve:', path.resolve('/folder1', 'folder2', 'index.html'))
-console.log('path resolve:', path.resolve('/folder1', '//folder2', 'index.html'))
-console.log('path resolve:', path.resolve('/folder1', '//folder2', '../index.html'))
-console.log('path resolve:', path.resolve(__dirname, 'text.js'))
+emitter.emit('order-burger', 'large', 'cheesy', '3')
