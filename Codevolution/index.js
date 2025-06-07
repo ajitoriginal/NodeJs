@@ -7,10 +7,12 @@ const server = http.createServer((req, res) => {
     }
     res.writeHead(200, {'Content-Type': 'text/html'})
     // res.writeHead(200, {'Content-Type': 'application/json'})
-    // const file = fs.readFileSync('./index.html', 'utf-8')
+    const name = 'Ajit'
+    let file = fs.readFileSync('./index.html', 'utf-8')
     // fs.createReadStream('./index.html').pipe(res)
-    fs.createReadStream(__dirname + '/index.html').pipe(res)
-    // res.end(file)
+    // fs.createReadStream(__dirname + '/index.html').pipe(res)
+    file = file.replace("{{name}}", name)
+    res.end(file)
     // res.end(JSON.stringify(superHero))
 })
 
