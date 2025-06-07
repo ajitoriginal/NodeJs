@@ -1,19 +1,19 @@
 const http = require('node:http')
 const fs = require('node:fs')
 const server = http.createServer((req, res) => {
-    let superHero = {
-        firstName: 'Tony',
-        lastName: 'Clark'
+    if(req.url === '/') {
+        res.writeHead(200, {'Content-Type': 'text/plain'})
+        res.end('Home page')
+    } else if(req.url === '/about') {
+        res.writeHead(200, {'Content-Type': 'text/plain'})
+        res.end('About page')
+    } else if(req.url === '/api') {
+        res.writeHead(200, {'Content-Type': 'application/json'})
+        res.end(JSON.stringify({firstName: 'Ajit', lastName: 'Singh'}))
+    } else {
+        res.writeHead(400)
+        res.end('Page not found')
     }
-    res.writeHead(200, {'Content-Type': 'text/html'})
-    // res.writeHead(200, {'Content-Type': 'application/json'})
-    const name = 'Ajit'
-    let file = fs.readFileSync('./index.html', 'utf-8')
-    // fs.createReadStream('./index.html').pipe(res)
-    // fs.createReadStream(__dirname + '/index.html').pipe(res)
-    file = file.replace("{{name}}", name)
-    res.end(file)
-    // res.end(JSON.stringify(superHero))
 })
 
 server.listen(3000, () => {
