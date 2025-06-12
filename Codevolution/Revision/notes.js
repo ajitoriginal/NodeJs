@@ -2,7 +2,8 @@
 Node.js is an open-source, cross-platform JavaScript runtime environment.
 Open Source: source code is publicly available for sharing and modification.
 Cross Platform: Available for Mac, Windows and Linux
-JavaScript runtime environment: 
+JavaScript runtime environment: provides all the necessary components in order to
+                                use and run a JavaScript program outside the browser
 
 Why learn Node.js?
 --Build end-to-end JavaScript applications
@@ -55,4 +56,23 @@ JavaScript Runtime consists of
     --Web/Browser API's like DOM, STORAGE, TIMERS
     --Queues like MICROTASK QUEUE, CALLBACK/TASK QUEUE
     --Event Loop
+
+What can you build with Node.js?
+--Traditional Websites
+--Backend services like APIs
+--Real-time applications
+--Streaming services
+--CLI tools
+--Multiplayer games and a lot more...
+
+Node.js allows you to build complex and powerful applications
+
+Node.js environment consists of
+--Dependencies
+--C/C++ features
+--JS library
+
+Node.js consists of C++ files which form the core features and
+JavaScript files which expose common utilitiesand some of the common
+C++ features for easier consumption
 */
