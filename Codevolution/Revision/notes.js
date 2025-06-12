@@ -29,4 +29,24 @@ ECMAScript Summary
 --ECMA-262 is the language specification
 --ECMAScript is the language that implements ECMA-262
 --JavaScript is basically ECMAScript at its core builds on top of that
+
+JavaScript Engine
+--JavaScript code we write cannot be understood by the computer
+--A JavaScript engine is a program that converts javascript code that developers write
+  into machine code that allows a computer to perform specific tasks
+--JavaScript engines are typically developed by web browser vendors
+    V8-Google for Chrome, created in 2008
+    SpiderMonkey-Mozilla Firefox
+    JavaScriptCore-Apple for Safari
+    Chakra-Microsoft Edge (The latest version of edge uses V8)
+
+Chrome's V8 Engine & Node.js
+--V8 engine is written in C++ by Google sits at the core of Node.js
+--By embedding V8 into your own C++ application, you can C++ code that gets
+  executed when a user writes JavaScript code
+--C++ is great for lower level operations like file handling, database connections and
+  network operations
+--C++ program can run ECMAScript and additional features that you choose to incorporate
+--The C++ program we're talking about is Node.js
+--Node.js is lot more than just a C++ program
 */
