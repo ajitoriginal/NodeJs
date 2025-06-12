@@ -75,4 +75,13 @@ Node.js environment consists of
 Node.js consists of C++ files which form the core features and
 JavaScript files which expose common utilitiesand some of the common
 C++ features for easier consumption
+
+Browser vs Node.js
+--In the browser, most of the time you interact with DOM or other Web Platform APIs
+  but you don't have document, window and all other objects in Node.js which are provided
+  by the browser.
+--In the browser, we don't have all the nice APIs that Node.js provides through its modules.
+  For example, the filesystem access functionality.
+--With Node.js, you control the environment
+--With a browser, you are at the mercy of what the users choose
 */
