@@ -49,4 +49,10 @@ Chrome's V8 Engine & Node.js
 --C++ program can run ECMAScript and additional features that you choose to incorporate
 --The C++ program we're talking about is Node.js
 --Node.js is lot more than just a C++ program
+
+JavaScript Runtime consists of
+    --V8 JavaScript Engine
+    --Web/Browser API's like DOM, STORAGE, TIMERS
+    --Queues like MICROTASK QUEUE, CALLBACK/TASK QUEUE
+    --Event Loop
 */
