@@ -20,4 +20,9 @@ Modules
     Local Modules
     Built-in Modules
     Third Party Modules
+
+libuv
+--libuv is a cross platform open source library written in C language
+--handles asynchronous non-blocking operations in Node.js
+--via Thread Pool and Event Loop
 */
