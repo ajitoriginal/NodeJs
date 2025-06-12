@@ -99,4 +99,9 @@ Local Modules Summary
 --When index.js is executed, the code in the modules is also executed
 --If the file we are requiring is a JavaSctipt file, we can skip specifying the extension
   and node.js will infer it on our behalf
+
+Module Scope Summary
+--Each loaded module in Node.js is wrapped with an IIFE that provides private
+  scoping of code
+--IIFE allows you to repeat variable or function names without any conflicts
 */
