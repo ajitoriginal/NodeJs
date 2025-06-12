@@ -84,4 +84,12 @@ Browser vs Node.js
   For example, the filesystem access functionality.
 --With Node.js, you control the environment
 --With a browser, you are at the mercy of what the users choose
+
+Modules
+--A module is an encapsulated and reusable chunk of code that has its own context.
+--in Node.js, each file is treated as a seperate module
+--Type of Modules
+    Local modules-Modules that we create in our application
+    Build-in modules-Modules that Node.js ships with out of the box
+    Third party modules-Modules written by other developers that we can use in our application
 */
