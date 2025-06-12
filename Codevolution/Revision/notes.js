@@ -24,4 +24,9 @@ Prerequisites
     --JavaScript fundamentals crash course : https://www.youtube.com/watch?v=XIOLqoPHCJ4
     --Advanced JavaScript crash course : https://www.youtube.com/watch?v=R9I85RhI7Cg
     --ES2015 topics : https://www.youtube.com/watch?v=-Z0i100x0mc
+
+ECMAScript Summary
+--ECMA-262 is the language specification
+--ECMAScript is the language that implements ECMA-262
+--JavaScript is basically ECMAScript at its core builds on top of that
 */
