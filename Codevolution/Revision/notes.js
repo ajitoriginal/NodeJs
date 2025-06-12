@@ -113,4 +113,15 @@ ES Modules Summary
 --The export can be default or named
 --If it is a default export, we can assign any name while importing
 --If it is a named export, the import name must be the same
+
+Built-in Modules
+--Modules that Node.js ships with
+--Also referred to as core modules
+--Import the module before you can use it
+--Some common used built-in modules are
+  path
+  events
+  fs
+  stream
+  http
 */
