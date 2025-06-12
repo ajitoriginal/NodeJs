@@ -1,11 +1,17 @@
-const math = require("./math")
+console.log("Hello Ajit Ji")
+
+
+// const data = require("./data.json")
+// console.log(data.name)
+// console.log(data)
+// const math = require("./math")
 
 // console.log(math.add(2, 3))
 // console.log(math.subtract(2, 3))
 
-const {add, subtract} = math
-console.log(add(2, 3))
-console.log(subtract(2, 3))
+// const {add, subtract} = math
+// console.log(add(2, 3))
+// console.log(subtract(2, 3))
 
 // const SuperHero = require("./super-hero")
 
