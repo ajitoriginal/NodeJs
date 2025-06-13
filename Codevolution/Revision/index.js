@@ -1,45 +1,59 @@
-const path = require("node:path")
+function greet(name) {
+    console.log(`Hello ${name}`)
+}
 
-console.log(__dirname)
-console.log(__filename)
+function greetAjit(greetFn) {
+    const name = "Ajit"
+    greetFn(name)
+}
+
+greetAjit(greet)
+
+//greetAjit is HigherOrderFunction
+//greet is callback function
+
+// const path = require("node:path")
+
+// console.log(__dirname)
+// console.log(__filename)
 
 // returns last portion of the path
-console.log(path.basename(__dirname))
-console.log(path.basename(__filename))
+// console.log(path.basename(__dirname))
+// console.log(path.basename(__filename))
 
 // returns extension of the path
-console.log(path.extname(__dirname))
-console.log(path.extname(__filename))
+// console.log(path.extname(__dirname))
+// console.log(path.extname(__filename))
 
 // returns an object contains some properties of the path
-console.log(path.parse(__dirname))
-console.log(path.parse(__filename))
+// console.log(path.parse(__dirname))
+// console.log(path.parse(__filename))
 
 // returns a string of path
-console.log(path.format(path.parse(__dirname)))
-console.log(path.format(path.parse(__filename)))
+// console.log(path.format(path.parse(__dirname)))
+// console.log(path.format(path.parse(__filename)))
 
 // returns whether a path is absolute or not
-console.log(path.isAbsolute(__filename))
-console.log(path.isAbsolute("./data.json"))
+// console.log(path.isAbsolute(__filename))
+// console.log(path.isAbsolute("./data.json"))
 
 // join all arguments together and normalize the resulting path
-console.log(path.join("folder1", "folder2", "file1.txt"))
-console.log(path.join("/folder1", "folder2", "file1.txt"))
-console.log(path.join("/folder1", "//folder2", "file1.txt"))
-console.log(path.join("folder1", "//folder2", "../file1.txt"))
-console.log(path.join("/folder1", "//folder2", "../file1.txt"))
-console.log(path.join("folder1", "folder2", "../file1.txt"))
-console.log(path.join(__dirname, "myfile.html"))
+// console.log(path.join("folder1", "folder2", "file1.txt"))
+// console.log(path.join("/folder1", "folder2", "file1.txt"))
+// console.log(path.join("/folder1", "//folder2", "file1.txt"))
+// console.log(path.join("folder1", "//folder2", "../file1.txt"))
+// console.log(path.join("/folder1", "//folder2", "../file1.txt"))
+// console.log(path.join("folder1", "folder2", "../file1.txt"))
+// console.log(path.join(__dirname, "myfile.html"))
 
 // resolves a sequence of paths or path segments into an abosolute path
-console.log(path.resolve("folder1", "folder2", "file1.txt"))
-console.log(path.resolve("/folder1", "folder2", "file1.txt"))
-console.log(path.resolve("/folder1", "//folder2", "file1.txt"))
-console.log(path.resolve("folder1", "//folder2", "../file1.txt"))
-console.log(path.resolve("/folder1", "//folder2", "../file1.txt"))
-console.log(path.resolve("folder1", "folder2", "../file1.txt"))
-console.log(path.resolve(__dirname, "myfile.html"))
+// console.log(path.resolve("folder1", "folder2", "file1.txt"))
+// console.log(path.resolve("/folder1", "folder2", "file1.txt"))
+// console.log(path.resolve("/folder1", "//folder2", "file1.txt"))
+// console.log(path.resolve("folder1", "//folder2", "../file1.txt"))
+// console.log(path.resolve("/folder1", "//folder2", "../file1.txt"))
+// console.log(path.resolve("folder1", "folder2", "../file1.txt"))
+// console.log(path.resolve(__dirname, "myfile.html"))
 
 // console.log("Hello Ajit Ji")
 
