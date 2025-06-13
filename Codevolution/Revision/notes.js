@@ -156,4 +156,11 @@ Events Module
 --Using the events module, we can dispatch our own custom events and respond to those
   custom events in a non-blocking manner
 
+Character Sets and Encoding
+  Computers convert character to a number, then convert that number to its binary representation
+  It is also called Character Code
+  Character codes are defined in Character Sets - Unicode, ASCII
+  Character Encoding dictates how to represent a number in character set as binary data (how many bits to use to represent the number)
+  e.g.: UTF-8 = states that character should be encoded in bytes (8 bytes)
+
 */
