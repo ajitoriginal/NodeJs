@@ -1,19 +1,26 @@
-const PizzaShop = require("./pizza-shop")
-const DrinkMachine = require("./drink-machine")
+const buffer = new Buffer.from("Singh")
 
-const pizzaShop = new PizzaShop()
-const drinkMachine = new DrinkMachine()
+buffer.write("Pankaj")
+console.log(buffer.toJSON())
+console.log(buffer)
+console.log(buffer.toString())
 
-pizzaShop.on("order", (size, flavour) => {
-    console.log(`Order received! Baking a ${size || 'standard'} pizza with flavour ${flavour || 'default'}`)
-    drinkMachine.serveDrink(size)
+// const PizzaShop = require("./pizza-shop")
+// const DrinkMachine = require("./drink-machine")
 
-})
+// const pizzaShop = new PizzaShop()
+// const drinkMachine = new DrinkMachine()
 
-pizzaShop.order("large", "corn")
-pizzaShop.displayOrderNumber()
-pizzaShop.order()
-pizzaShop.displayOrderNumber()
+// pizzaShop.on("order", (size, flavour) => {
+//     console.log(`Order received! Baking a ${size || 'standard'} pizza with flavour ${flavour || 'default'}`)
+//     drinkMachine.serveDrink(size)
+
+// })
+
+// pizzaShop.order("large", "corn")
+// pizzaShop.displayOrderNumber()
+// pizzaShop.order()
+// pizzaShop.displayOrderNumber()
 
 // const EventEmitter = require("node:events")
 

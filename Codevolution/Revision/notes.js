@@ -163,4 +163,11 @@ Character Sets and Encoding
   Character Encoding dictates how to represent a number in character set as binary data (how many bits to use to represent the number)
   e.g.: UTF-8 = states that character should be encoded in bytes (8 bytes)
 
+Streams
+  A sequence of data that is being moved from one point to another point over time
+
+Buffer
+  A temporary memory storage area used to hold data while it is being moved from
+  one place to another.
+
 */
