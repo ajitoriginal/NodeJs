@@ -124,4 +124,7 @@ Built-in Modules
   fs
   stream
   http
+
+Path
+--The path module provides utilities for working with file and directory paths
 */
