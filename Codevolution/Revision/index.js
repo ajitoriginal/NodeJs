@@ -1,19 +1,36 @@
-const EventEmitter = require("node:events")
+const PizzaShop = require("./pizza-shop")
+const DrinkMachine = require("./drink-machine")
 
-const emitter = new EventEmitter()
+const pizzaShop = new PizzaShop()
+const drinkMachine = new DrinkMachine()
 
-emitter.on("order-pizza", (size, flavour) => {
-    console.log(`Order received! Baking a ${size} pizza with flavour ${flavour}`)
+pizzaShop.on("order", (size, flavour) => {
+    console.log(`Order received! Baking a ${size || 'standard'} pizza with flavour ${flavour || 'default'}`)
+    drinkMachine.serveDrink(size)
+
 })
 
-emitter.on("order-pizza", (size) => {
-    if(size === "large") {
-        console.log(`Serving complimentary drink`)
-    }
-})
+pizzaShop.order("large", "corn")
+pizzaShop.displayOrderNumber()
+pizzaShop.order()
+pizzaShop.displayOrderNumber()
 
-console.log("before event occurs")
-emitter.emit("order-pizza", "large", "cheese")
+// const EventEmitter = require("node:events")
+
+// const emitter = new EventEmitter()
+
+// emitter.on("order-pizza", (size, flavour) => {
+//     console.log(`Order received! Baking a ${size} pizza with flavour ${flavour}`)
+// })
+
+// emitter.on("order-pizza", (size) => {
+//     if(size === "large") {
+//         console.log(`Serving complimentary drink`)
+//     }
+// })
+
+// console.log("before event occurs")
+// emitter.emit("order-pizza", "large", "cheese")
 
 // function greet(name) {
 //     console.log(`Hello ${name}`)
