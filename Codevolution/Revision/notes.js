@@ -149,4 +149,11 @@ Asynchronous callbacks
   In Node.js have an asynchronous nature to prevent blocking of execution
   Ex: reading data from a file, fetching data from a database or handling a network request
 
+Events Module
+--allow us to work with events in Node.js
+--An event is an action or an occurence that has happened in our application that we
+  can respond to
+--Using the events module, we can dispatch our own custom events and respond to those
+  custom events in a non-blocking manner
+
 */

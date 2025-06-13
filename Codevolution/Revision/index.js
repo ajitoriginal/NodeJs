@@ -1,13 +1,30 @@
-function greet(name) {
-    console.log(`Hello ${name}`)
-}
+const EventEmitter = require("node:events")
 
-function greetAjit(greetFn) {
-    const name = "Ajit"
-    greetFn(name)
-}
+const emitter = new EventEmitter()
 
-greetAjit(greet)
+emitter.on("order-pizza", (size, flavour) => {
+    console.log(`Order received! Baking a ${size} pizza with flavour ${flavour}`)
+})
+
+emitter.on("order-pizza", (size) => {
+    if(size === "large") {
+        console.log(`Serving complimentary drink`)
+    }
+})
+
+console.log("before event occurs")
+emitter.emit("order-pizza", "large", "cheese")
+
+// function greet(name) {
+//     console.log(`Hello ${name}`)
+// }
+
+// function greetAjit(greetFn) {
+//     const name = "Ajit"
+//     greetFn(name)
+// }
+
+// greetAjit(greet)
 
 //greetAjit is HigherOrderFunction
 //greet is callback function
