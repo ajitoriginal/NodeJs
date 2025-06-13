@@ -170,4 +170,7 @@ Buffer
   A temporary memory storage area used to hold data while it is being moved from
   one place to another.
 
+Asynchronous JavaScript
+  JavaScript is a synchronous, blocking, single-threaded language.
+  Node.js makes it possible to use JavaScript asynchronously.
 */
