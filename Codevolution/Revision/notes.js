@@ -173,4 +173,7 @@ Buffer
 Asynchronous JavaScript
   JavaScript is a synchronous, blocking, single-threaded language.
   Node.js makes it possible to use JavaScript asynchronously.
+
+FS Module
+  The file system (fs) module allows you to work with the file system on your computer.
 */

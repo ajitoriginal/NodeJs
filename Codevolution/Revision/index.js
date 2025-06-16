@@ -1,9 +1,38 @@
-const buffer = new Buffer.from("Singh")
+const fs = require("node:fs")
 
-buffer.write("Pankaj")
-console.log(buffer.toJSON())
-console.log(buffer)
-console.log(buffer.toString())
+console.log("first log")
+const fileContent = fs.readFileSync("./file.txt", "utf-8")
+console.log("in readFileSync", fileContent)
+console.log("second log")
+fs.readFile("./file.txt", "utf-8", (error, data) => {
+    if(error) throw error
+    console.log("in readFile", data)
+})
+
+console.log("last log")
+
+//to write file synchronously
+fs.writeFileSync("./greet.txt", "hello world")
+console.log("after writeFileSync")
+
+//to write file asynchronously
+// fs.writeFile("./hello.txt", " hello there", (err) => {
+//     if (err) throw err
+//     console.log("inside writeFile which written successfully!")
+// })
+
+//to append content in a file
+fs.writeFile("./hello2.txt", " hello there", {flag: "a"}, (err) => {
+    if (err) throw err
+    console.log("inside writeFile which written successfully!")
+})
+
+// const buffer = new Buffer.from("Singh")
+
+// buffer.write("Pankaj")
+// console.log(buffer.toJSON())
+// console.log(buffer)
+// console.log(buffer.toString())
 
 // const PizzaShop = require("./pizza-shop")
 // const DrinkMachine = require("./drink-machine")
