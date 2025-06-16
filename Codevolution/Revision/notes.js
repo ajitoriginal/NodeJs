@@ -165,6 +165,11 @@ Character Sets and Encoding
 
 Streams
   A sequence of data that is being moved from one point to another point over time
+  Types of Streams
+    Readable streams
+    Writeable streams
+    Duplex streams like sockets
+    Transform streams like file compression
 
 Buffer
   A temporary memory storage area used to hold data while it is being moved from
