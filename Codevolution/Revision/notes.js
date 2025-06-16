@@ -181,4 +181,12 @@ Asynchronous JavaScript
 
 FS Module
   The file system (fs) module allows you to work with the file system on your computer.
+
+HTTP
+  Hypertext Transfer Protocol
+  defines a format for clients and servers to speak to each other
+  client sends HTTP request and server responds with an HTTP response
+  we can create an HTTP web server using Node.js
+  Node.js has access to operating system functionality like networking
+  The HTTP module allows creation of web servers
 */
