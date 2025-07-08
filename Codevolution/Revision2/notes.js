@@ -27,6 +27,20 @@ if the required file to import is a JavaScript file, we can skip specifying the 
 Each loaded module in Node.js is wrapped with an IIFE that provides private scoping of code.
 IIFE allows to repeat variable of function names without any conflicts.
 
+Modules
+    Local Modules : User creates modules inside the applications and use it in different files.
+    Built-in Modules : Node.js ships with, also known as core modules, needs to be imported before use.
+                        Some common built-in modules are:
+                        path : provides utilities to work with files and directory paths.
+                        events :
+                        fs :
+                        stream :
+                        http : 
+    Third-party Modules
+
+
+
+
 
 
 */
