@@ -1,15 +1,21 @@
-const PizzaShop = require("./pizza-shop")
-const DrinkMachine = require("./drink-machine")
-const pizzaShop = new PizzaShop()
-const drinkMachine = new DrinkMachine()
+const buffer = new Buffer.from("Vishwas")
+buffer.write("Codevolution")
+console.log(buffer)
+console.log(buffer.toJSON())
+console.log(buffer.toString())
 
-pizzaShop.on("order", (size, topping) => {
-    console.log(`Order received! Baking a ${size} pizza with ${topping}`)
-    drinkMachine.serveDrink(size)
-})
+// const PizzaShop = require("./pizza-shop")
+// const DrinkMachine = require("./drink-machine")
+// const pizzaShop = new PizzaShop()
+// const drinkMachine = new DrinkMachine()
 
-pizzaShop.order("large", "mashroom")
-pizzaShop.displayOrderNumber()
+// pizzaShop.on("order", (size, topping) => {
+//     console.log(`Order received! Baking a ${size} pizza with ${topping}`)
+//     drinkMachine.serveDrink(size)
+// })
+
+// pizzaShop.order("large", "mashroom")
+// pizzaShop.displayOrderNumber()
 
 
 

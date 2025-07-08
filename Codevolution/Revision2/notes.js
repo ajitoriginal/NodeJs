@@ -47,7 +47,8 @@ Character Sets : predefined list of characters represented by numbers. Unicode a
 Character Encoding : dictates how to represent a number in a character set as binary data, how many bits to use to represent the number.
                         For example : UTF-8 states that characters should be encoded in bytes (8 bits)
 
-Streams and buffers
+Streams : a sequence of data that is being moved from one point to another over time.
+buffers
 Asynchronous JavaScript : 
 
 
