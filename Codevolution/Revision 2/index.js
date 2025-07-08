@@ -1,8 +1,13 @@
-const {add, subtract} = require('./math')
+const data = require('./data.json')
+console.log(data.name)
+console.log(data.address)
+console.log(data.address.city)
+
+// const {add, subtract} = require('./math')
 // const math = require('./math')
 // const {add, subtract} = math
-console.log(add(2,3))
-console.log(subtract(2,3))
+// console.log(add(2,3))
+// console.log(subtract(2,3))
 // console.log(math.add(2,3))
 // console.log(math.subtract(2,3))
 
