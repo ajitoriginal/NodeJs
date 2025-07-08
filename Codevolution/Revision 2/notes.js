@@ -19,6 +19,11 @@ and some of the C++ features(File Handeling, Input Output and Network Operations
 
 Node REPL stands for Read, Evaluate, Print and Loop.
 
+In Node.js, each file is a module that is isolated by default.
+To load a module into another file, we use the require function.
+When index.js is executed, the code in the module is also executed.
+if the required file to import is a JavaScript file, we can skip specifying the extension
+
 
 
 */
