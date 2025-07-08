@@ -17,6 +17,8 @@ JavaScript runtime environment is a combination of V8 engine, Web Browers API's,
 Node.js consists C++ files which form the core features and JavaScript files which expose common utilities
 and some of the C++ features(File Handeling, Input Output and Network Operations) for easier consumption.
 
+Node REPL stands for Read, Evaluate, Print and Loop.
+
 
 
 */
