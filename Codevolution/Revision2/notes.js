@@ -38,6 +38,11 @@ Modules
                         http : 
     Third-party Modules
 
+Callbacks
+    Synchronous Callbacks : executed immediately
+    Asynchronous Callbacks : used to delay the execution of a function until a particular time or event has occurred or
+                                after an asynchronous operation has completed.
+
 
 
 
