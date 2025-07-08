@@ -48,8 +48,12 @@ Character Encoding : dictates how to represent a number in a character set as bi
                         For example : UTF-8 states that characters should be encoded in bytes (8 bits)
 
 Streams : a sequence of data that is being moved from one point to another over time.
-buffers
-Asynchronous JavaScript : 
+buffers : a temporary storage area to hold data while it is being moved from one place to another.
+Asynchronous JavaScript : JavaScript is a synchronous, blocking, single-threaded language.
+                            This nature is not beneficial for writing apps.
+                            to make it's behaviour non-blocking and asynchronous, browser make it possible for FE
+                            and Node.js make it possible for BE.
+                            The style of programming where we don't block the main JavaScript thread is fundamental to Node.js
 
 
 
