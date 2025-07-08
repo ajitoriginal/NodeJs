@@ -22,7 +22,10 @@ Node REPL stands for Read, Evaluate, Print and Loop.
 In Node.js, each file is a module that is isolated by default.
 To load a module into another file, we use the require function.
 When index.js is executed, the code in the module is also executed.
-if the required file to import is a JavaScript file, we can skip specifying the extension
+if the required file to import is a JavaScript file, we can skip specifying the extension.
+
+Each loaded module in Node.js is wrapped with an IIFE that provides private scoping of code.
+IIFE allows to repeat variable of function names without any conflicts.
 
 
 
