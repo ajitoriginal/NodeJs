@@ -43,7 +43,12 @@ Callbacks
     Asynchronous Callbacks : used to delay the execution of a function until a particular time or event has occurred or
                                 after an asynchronous operation has completed.
 
+Character Sets : predefined list of characters represented by numbers. Unicode and ASCII etc.
+Character Encoding : dictates how to represent a number in a character set as binary data, how many bits to use to represent the number.
+                        For example : UTF-8 states that characters should be encoded in bytes (8 bits)
 
+Streams and buffers
+Asynchronous JavaScript : 
 
 
 
