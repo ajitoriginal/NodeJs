@@ -1,11 +1,19 @@
-const SuperHero = require('./super-hero')
-const batman = new SuperHero('Batman')
-console.log(batman.getName())
-batman.setName('Bruce')
-console.log(batman.getName())
+const {add, subtract} = require('./math')
+// const math = require('./math')
+// const {add, subtract} = math
+console.log(add(2,3))
+console.log(subtract(2,3))
+// console.log(math.add(2,3))
+// console.log(math.subtract(2,3))
 
-const superman = new SuperHero('Superman')
-console.log(superman.getName())
+// const SuperHero = require('./super-hero')
+// const batman = new SuperHero('Batman')
+// console.log(batman.getName())
+// batman.setName('Bruce')
+// console.log(batman.getName())
+
+// const superman = new SuperHero('Superman')
+// console.log(superman.getName())
 
 
 // require('./batman')
