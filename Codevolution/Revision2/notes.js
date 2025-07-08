@@ -32,7 +32,7 @@ Modules
     Built-in Modules : Node.js ships with, also known as core modules, needs to be imported before use.
                         Some common built-in modules are:
                         path : provides utilities to work with files and directory paths.
-                        events :
+                        events : allows to work with events
                         fs :
                         stream :
                         http : 

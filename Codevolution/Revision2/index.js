@@ -1,13 +1,43 @@
-function greet(name) {
-    console.log(`Hello ${name}`)
-}
+const PizzaShop = require("./pizza-shop")
+const DrinkMachine = require("./drink-machine")
+const pizzaShop = new PizzaShop()
+const drinkMachine = new DrinkMachine()
 
-function greetAjit(greetFn) {
-    const name = 'Ajit'
-    greet(name)
-}
+pizzaShop.on("order", (size, topping) => {
+    console.log(`Order received! Baking a ${size} pizza with ${topping}`)
+    drinkMachine.serveDrink(size)
+})
 
-greetAjit(greet)
+pizzaShop.order("large", "mashroom")
+pizzaShop.displayOrderNumber()
+
+
+
+
+// const EventEmitter = require("node:events")
+// const emitter = new EventEmitter()
+// emitter.on("order-pizza", (size, topping) => {
+//     console.log(`Order received! Baking a ${size} pizza with ${topping}`)
+// })
+// emitter.on("order-pizza", (size) => {
+//     if(size === "large") {
+//         console.log(`Serving complimentary drink`)
+//     }
+// })
+// console.log('before event emits')
+// emitter.emit("order-pizza", "large", "mashroom")
+// console.log('after event emits')
+
+// function greet(name) {
+//     console.log(`Hello ${name}`)
+// }
+
+// function greetAjit(greetFn) {
+//     const name = 'Ajit'
+//     greet(name)
+// }
+
+// greetAjit(greet)
 
 // const path = require("node:path")
 // console.log(__dirname)
