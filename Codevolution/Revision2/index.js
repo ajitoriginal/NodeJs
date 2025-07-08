@@ -1,29 +1,47 @@
-const fs = require("node:fs")
-console.log("console before readFileSync")
-const fileContent = fs.readFileSync("./file.txt", "utf-8")
-console.log(fileContent)
-console.log("console after readFileSync")
-console.log("console before readFile")
-fs.readFile("./file2.txt", "utf-8", (err, data) => {
-    if(err) {
-        console.log(err)
-    } else {
+const fs = require("node:fs/promises")
+console.log('console before readFile Promise Async')
+async function readFile() {
+    try {
+        let data = await fs.readFile("./file.txt", "utf-8")
         console.log(data)
-    }
-})
-console.log("console after readFile")
-console.log("console before writeFileSync")
-fs.writeFileSync("./greet.txt", "Hello from greet file")
-console.log("console after writeFileSync")
-console.log("console before writeFile")
-fs.writeFile("./greet2.txt", "Hello from greet file 2 ", {flag: "a"}, (err) => {
-    if(err) {
+    } catch(err) {
         console.log(err)
-    } else {
-        console.log("file written successfully in writeFile")
     }
-})
-console.log("console after writeFile")
+}
+readFile()
+console.log('console after readFile Promise Async')
+// console.log('console before readFile Promise')
+// fs.readFile("./file.txt", "utf-8")
+// .then((data) => console.log(data))
+// .catch((err) => console.log(err))
+// console.log('console after readFile Promise')
+
+// const fs = require("node:fs")
+// console.log("console before readFileSync")
+// const fileContent = fs.readFileSync("./file.txt", "utf-8")
+// console.log(fileContent)
+// console.log("console after readFileSync")
+// console.log("console before readFile")
+// fs.readFile("./file2.txt", "utf-8", (err, data) => {
+//     if(err) {
+//         console.log(err)
+//     } else {
+//         console.log(data)
+//     }
+// })
+// console.log("console after readFile")
+// console.log("console before writeFileSync")
+// fs.writeFileSync("./greet.txt", "Hello from greet file")
+// console.log("console after writeFileSync")
+// console.log("console before writeFile")
+// fs.writeFile("./greet2.txt", "Hello from greet file 2 ", {flag: "a"}, (err) => {
+//     if(err) {
+//         console.log(err)
+//     } else {
+//         console.log("file written successfully in writeFile")
+//     }
+// })
+// console.log("console after writeFile")
 
 // const buffer = new Buffer.from("Vishwas")
 // buffer.write("Codevolution")
