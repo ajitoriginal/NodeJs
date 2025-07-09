@@ -57,5 +57,11 @@ Asynchronous JavaScript : JavaScript is a synchronous, blocking, single-threaded
 
 FS Modlue : The file system (fs) module allows you to work with the file system on your computer.
 
+Types of Streams:
+    Readable Streams : like reading a file
+    Writable Streams : like writing to a file
+    Duplex Streams : like Sockets
+    Transform Streams : like file compression
+
 
 */

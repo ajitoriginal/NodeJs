@@ -1,15 +1,28 @@
-const fs = require("node:fs/promises")
-console.log('console before readFile Promise Async')
-async function readFile() {
-    try {
-        let data = await fs.readFile("./file.txt", "utf-8")
-        console.log(data)
-    } catch(err) {
-        console.log(err)
-    }
-}
-readFile()
-console.log('console after readFile Promise Async')
+const fs = require("node:fs")
+const readableStream = fs.createReadStream("./file.txt", {
+    encoding: "utf-8",
+    highWaterMark: 2
+})
+const writeableStream = fs.createWriteStream("./file2.txt")
+// readableStream.on("data", (chunk) => {
+//     console.log(chunk)
+//     writeableStream.write(chunk)
+// })
+
+readableStream.pipe(writeableStream)
+
+// const fs = require("node:fs/promises")
+// console.log('console before readFile Promise Async')
+// async function readFile() {
+//     try {
+//         let data = await fs.readFile("./file.txt", "utf-8")
+//         console.log(data)
+//     } catch(err) {
+//         console.log(err)
+//     }
+// }
+// readFile()
+// console.log('console after readFile Promise Async')
 // console.log('console before readFile Promise')
 // fs.readFile("./file.txt", "utf-8")
 // .then((data) => console.log(data))
