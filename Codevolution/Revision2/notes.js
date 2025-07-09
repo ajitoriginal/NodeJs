@@ -63,5 +63,7 @@ Types of Streams:
     Duplex Streams : like Sockets
     Transform Streams : like file compression
 
+All Synchronous JavaScript code takes priority over async code
+All callbacks in nextTick queue are executed before callbacks in promise queue
 
 */

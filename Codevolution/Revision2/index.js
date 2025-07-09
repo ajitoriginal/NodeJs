@@ -1,15 +1,61 @@
-const fs = require("node:fs")
-const readableStream = fs.createReadStream("./file.txt", {
-    encoding: "utf-8",
-    highWaterMark: 2
-})
-const writeableStream = fs.createWriteStream("./file2.txt")
+Promise.resolve().then(() => console.log("this is Promise.resolve 1"))
+process.nextTick(() => console.log("this is process.nextTick 1"))
+// console.log('console.log 1')
+// console.log('console.log 2')
+
+// const http = require("node:http")
+
+
+// const fs = require("node:fs")
+// const server = http.createServer((req, res) => {
+//     if(req.url === "/") {
+//         res.writeHead(200, {"Content-Type": "text/plain"})
+//         res.write("Home Page")
+//     } else if(req.url === "/about") {
+//         res.writeHead(200, {"Content-Type": "text/plain"})
+//         res.write("About Page")
+//     } else if(req.url === "/api") {
+//         res.writeHead(200, {"Content-Type": "application/json"})
+//         res.write(JSON.stringify({name: "Tony Stark"}))
+//     } else if(req.url === "/html-file") {
+//         res.writeHead(200, {"Content-Type": "text/html"})
+//         let fileContent = fs.readFileSync("./index.html", "utf-8")
+//         fileContent = fileContent.replace("{{name}}", "Tony")
+//         res.write(fileContent)
+//     } else {
+//         res.writeHead(400)
+//         res.write("Page not found")
+//     }
+    
+    // res.writeHead(200, {"Content-Type": "text/plain"})
+    // res.writeHead(200, {"Content-Type": "text/html"})
+    // res.writeHead(200, {"Content-Type": "application/json"})
+    
+    // res.write("<h1>Hello Tony</h1>")
+    // let fileContent = fs.readFileSync("./index.html", "utf-8")
+    // console.log(fileContent)
+    // fileContent = fileContent.replace("{{name}}", "Tony")
+    // console.log(fileContent)
+    // res.write(fileContent)
+    // res.write(JSON.stringify({name: "Ajit"}))
+    // res.end()
+    // fs.createReadStream("./index.html").pipe(res)
+// })
+// server.listen(8080, () => {
+//     console.log(`Server is running on PORT 8080`)
+// })
+// const fs = require("node:fs")
+// const readableStream = fs.createReadStream("./file.txt", {
+//     encoding: "utf-8",
+//     highWaterMark: 2
+// })
+// const writeableStream = fs.createWriteStream("./file2.txt")
 // readableStream.on("data", (chunk) => {
 //     console.log(chunk)
 //     writeableStream.write(chunk)
 // })
 
-readableStream.pipe(writeableStream)
+// readableStream.pipe(writeableStream)
 
 // const fs = require("node:fs/promises")
 // console.log('console before readFile Promise Async')
