@@ -38,3 +38,15 @@ Chrome's V8 Engine Summary
     Allows to write own C++ programs which can do everything that V8 can do
     C++ program can run ECMAScript and additional features that you choose to incorporate
     For example, features that are available in C++ but not available with JavaScript
+
+JavaScript Runtime
+    An environment which provides all necessary components in order to use and run a JavaScript program
+    Every browser has a JavaScript engine
+    A JavaScript engine is one component in the JavaScript Runtime
+    Chrome Browser JavaScript Runtime
+        1. JavaScript Code --> V8 JavaScript Engine [Memory <-> Call Stack] 
+        2. V8 JavaScript Engine [Memory <-> Call Stack] --> Web/Browser API's [DOM, Storage, Timers]
+        3. Web/Browser API's [DOM, Storage, Timers] --> Queues [Micro Task Queue, Callback Task Queue]
+        4. ueues [Micro Task Queue, Callback Task Queue] --> Event Loop
+        5. Event Loop --> V8 JavaScript Engine [Memory <-> Call Stack] (Repeat step 2)
+                                    
