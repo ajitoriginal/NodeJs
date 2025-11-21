@@ -50,3 +50,18 @@ JavaScript Runtime
         4. ueues [Micro Task Queue, Callback Task Queue] --> Event Loop
         5. Event Loop --> V8 JavaScript Engine [Memory <-> Call Stack] (Repeat step 2)
                                     
+What can be build with Node.js
+    Traditional websites
+    Backend services like APIs
+    Real-time applications
+    Streaming services
+    CLI tools
+    Multiplayer games
+
+Node.js Summary
+    It is an open-source, cross-platform JavaScript runtime environment
+    Not a language, not a framework
+    Capable of executing JavaScript code outside a browser
+    Can execute standard ECMAScript language, new features through C++ bindings using the V8 engine
+    Consists of C++ files which form the core features and JavaScript files which expose common utilities and some of the C++ features for easier consumption
+    Node JS = [JS Library, C/C++ features, Dependencies(V8, libuv, zlib, crypto, etc)]
