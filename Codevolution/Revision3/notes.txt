@@ -24,3 +24,8 @@ Prerequisites
         JavaScript fundamentals crash course
         Advanced JavaScript crash course
         ES2015 topics
+
+ECMAScript Summary
+    ECMA-262 is the language specification
+    ECMAScript is the language that implements ECMA-262
+    JavaScript is basically ECMAScript at its core but builds on top of that
