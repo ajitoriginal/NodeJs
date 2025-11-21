@@ -1,0 +1,26 @@
+What is Node.js
+    An open-source, cross-platform JavaScript runtime environment
+    Open-source : source code is publicly available for sharing and modification
+    Cross-platform : Available on Mac, Windows and Linux
+    JavaScript runtime environment : ?
+
+Why Learn Node.js
+    Build end-to-end JavaScript applications
+    Major companies have migrated from other backend technologies to Node.js
+    Full stack development
+    Huge community support
+
+Course structure
+    Terms and concepts
+    Modules (User defined)
+    Build-in modules
+    Node.js internals
+    npm - Node package manager
+    CLI tool
+    Misc
+
+Prerequisites
+    Modern JavaScript
+        JavaScript fundamentals crash course
+        Advanced JavaScript crash course
+        ES2015 topics
