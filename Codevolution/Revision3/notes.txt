@@ -73,3 +73,8 @@ Modules
         Local modules - We create in our application
         Build-in modules - Node.js ships with out of the box
         Third party modules - written by other developers that we can use in our application
+
+Local Modules Summary
+    In Node.js, each file is a module that is isolated by default
+    To load a module into another file, we use the require function
+    
