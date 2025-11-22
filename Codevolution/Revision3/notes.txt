@@ -65,3 +65,11 @@ Node.js Summary
     Can execute standard ECMAScript language, new features through C++ bindings using the V8 engine
     Consists of C++ files which form the core features and JavaScript files which expose common utilities and some of the C++ features for easier consumption
     Node JS = [JS Library, C/C++ features, Dependencies(V8, libuv, zlib, crypto, etc)]
+
+Modules
+    It is an encapsulated and reusable chunk of code that has its own context
+    In Node.js, each file is treated as a seperate module
+    Types of Modules
+        Local modules - We create in our application
+        Build-in modules - Node.js ships with out of the box
+        Third party modules - written by other developers that we can use in our application
