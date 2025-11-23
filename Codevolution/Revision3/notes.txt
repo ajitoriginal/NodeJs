@@ -84,3 +84,4 @@ Module Scope
 
 Module Wrapper
     Node.js wrap module with a function which contains (exports, require, module, __dirname, __filename) in parameter before module code gets executed
+    
