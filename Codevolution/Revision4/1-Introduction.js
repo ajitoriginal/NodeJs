@@ -12,3 +12,12 @@ Why learn Node.js?
 - A number of major companies like LinkedIn, Netflix, Paypal have all migrated to other backend technologies to Node.js
 - Full stack development is one of the most sought out skill sets by companies
 - Hugh company support
+
+Course structure
+- Terms and concepts to understand what is Node.js
+- Modules (User defined)
+- Build-in modules
+- Node.js internals
+- npm - Node package manager
+- CLI tool
+- MISC
