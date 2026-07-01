@@ -4,7 +4,7 @@
 
 // Open-Source : source code is publicly available for sharing and modification
 // Cross-Platform : Available on Mac, Windows and Linux
-// JavaScript runtime environment : 
+// JavaScript runtime environment : provides all the necessary components in order to use and run a JavaScript program outside the browser
 
 // Why learn Node.js?
 
