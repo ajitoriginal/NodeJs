@@ -21,3 +21,6 @@ Course structure
 - npm - Node package manager
 - CLI tool
 - MISC
+
+
+Note: Express.js is the web framework for Node.js
