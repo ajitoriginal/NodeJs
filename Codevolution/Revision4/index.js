@@ -10,8 +10,26 @@
 // console.log(sum2)
 
 
+// ===================================== 12-Module Wrapper.js ===========================================================
+// require('./batman.js')
+// require('./superman.js')
 // ================================================================================================
-require('./batman.js')
-require('./superman.js')
+
+// ================================= 13-Module Caching.js ===============================================================
+const SuperHero = require('./super-hero.js')
+// console.log(superHero.getName())
+const batman = new SuperHero('Batman')
+// superHero.setName('Superman')
+console.log(batman.getName())
+batman.setName('Bruce')
+console.log(batman.getName())
+
+// const newSuperHero = require('./super-hero.js')
+// superHero.setName('Batman')
+const superman = new SuperHero('Superman')
+console.log(superman.getName())
+superman.setName('Clark')
+console.log(superman.getName())
+
 // ================================================================================================
 
