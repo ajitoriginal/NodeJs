@@ -1,0 +1,8 @@
+{
+    "name": "Tony Stark",
+    "age": 29,
+    "address": {
+        "street": "Wayne Manner",
+        "city": "Gothum"
+    }
+}

@@ -34,9 +34,9 @@
 // ================================================================================================
 
 // ================================ 14-Import Export Patterns.js ==================================
-const math = require('./math.js')
-console.log(math.add(2, 3))
-console.log(math.subtract(2, 3))
+// const math = require('./math.js')
+// console.log(math.add(2, 3))
+// console.log(math.subtract(2, 3))
 // const mathFn = require('./math.js')
 // console.log(mathFn.add(2, 3))
 // console.log(mathFn.subtract(2, 3))
@@ -45,3 +45,5 @@ console.log(math.subtract(2, 3))
 // console.log(subtract(2, 3))
 // ================================================================================================
 
+const data = require('./data.json')
+console.log(data)
