@@ -93,6 +93,4 @@ function higherOrderFn(callbackFn) {
     callbackFn(name)
 }
 
-
-
 higherOrderFn(greet)
