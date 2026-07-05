@@ -49,7 +49,7 @@
 // console.log(data)
 
 // ================================ 19-Path Module.js =============================================
-const path = require("node:path")
+// const path = require("node:path")
 // console.log(__dirname)
 // console.log(__filename)
 
@@ -74,11 +74,25 @@ const path = require("node:path")
 // console.log(path.join("/folder1", "folder2", "../index.html"))
 // console.log(path.join(__dirname,"./data.json"))
 
-console.log(path.resolve("folder1", "folder2", "index.html"))
-console.log(path.resolve("/folder1", "folder2", "index.html"))
-console.log(path.resolve("/folder1", "//folder2", "index.html"))
-console.log(path.resolve("/folder1", "/folder2", "index.html"))
-console.log(path.resolve("/folder1", "//folder2", "../index.html"))
-console.log(path.resolve("/folder1", "/folder2", "../index.html"))
-console.log(path.resolve("/folder1", "folder2", "../index.html"))
-console.log(path.resolve(__dirname,"./data.json"))
+// console.log(path.resolve("folder1", "folder2", "index.html"))
+// console.log(path.resolve("/folder1", "folder2", "index.html"))
+// console.log(path.resolve("/folder1", "//folder2", "index.html"))
+// console.log(path.resolve("/folder1", "/folder2", "index.html"))
+// console.log(path.resolve("/folder1", "//folder2", "../index.html"))
+// console.log(path.resolve("/folder1", "/folder2", "../index.html"))
+// console.log(path.resolve("/folder1", "folder2", "../index.html"))
+// console.log(path.resolve(__dirname,"./data.json"))
+
+// ================================ 20-Callback Pattern.js =============================================
+function greet(name) {
+    console.log(`Hello ${name}`)
+}
+
+function higherOrderFn(callbackFn) {
+    const name = 'Ajit'
+    callbackFn(name)
+}
+
+
+
+higherOrderFn(greet)
