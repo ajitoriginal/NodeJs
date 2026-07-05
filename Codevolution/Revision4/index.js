@@ -30,7 +30,6 @@
 // console.log(superman.getName())
 // superman.setName('Clark')
 // console.log(superman.getName())
-
 // ================================================================================================
 
 // ================================ 14-Import Export Patterns.js ==================================
@@ -45,8 +44,11 @@
 // console.log(subtract(2, 3))
 // ================================================================================================
 
+// ================================ 17-Importing JSON and Watch Mode.js ===========================
 // const data = require('./data.json')
 // console.log(data)
+// ================================================================================================
+
 
 // ================================ 19-Path Module.js =============================================
 // const path = require("node:path")
@@ -82,15 +84,17 @@
 // console.log(path.resolve("/folder1", "/folder2", "../index.html"))
 // console.log(path.resolve("/folder1", "folder2", "../index.html"))
 // console.log(path.resolve(__dirname,"./data.json"))
+// ================================================================================================
 
 // ================================ 20-Callback Pattern.js =============================================
-function greet(name) {
-    console.log(`Hello ${name}`)
-}
+// function greet(name) {
+//     console.log(`Hello ${name}`)
+// }
 
-function higherOrderFn(callbackFn) {
-    const name = 'Ajit'
-    callbackFn(name)
-}
+// function higherOrderFn(callbackFn) {
+//     const name = 'Ajit'
+//     callbackFn(name)
+// }
 
-higherOrderFn(greet)
+// higherOrderFn(greet)
+// ================================================================================================
