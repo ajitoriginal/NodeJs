@@ -100,20 +100,42 @@
 // ================================================================================================
 
 // ======================================= 21-Events Module.js ====================================
-const EventEmitter = require("node:events")
-const emitter = new EventEmitter()
+// const EventEmitter = require("node:events")
+// const emitter = new EventEmitter()
 
-emitter.on('order-pizza', (size, flavour) => {
-    console.log(`Order Received, Backing a ${size} sized ${flavour} flavoured pizza!`)
-})
-emitter.on('order-pizza', (size) => {
-    if(size === 'large') console.log(`Serving complimentary drink.\n`)
-})
+// emitter.on('order-pizza', (size, flavour) => {
+//     console.log(`Order Received, Backing a ${size} sized ${flavour} flavoured pizza!`)
+// })
+// emitter.on('order-pizza', (size) => {
+//     if(size === 'large') console.log(`Serving complimentary drink.\n`)
+// })
 
-console.log('Test console 1')
-// emitter.emit('order-pizza')
-emitter.emit('order-pizza', 'large', 'cheese')
-console.log('Test console 2')
-emitter.emit('order-pizza', 'medium', 'mushroom')
-console.log('Test console 3')
+// console.log('Test console 1')
+// // emitter.emit('order-pizza')
+// emitter.emit('order-pizza', 'large', 'cheese')
+// console.log('Test console 2')
+// emitter.emit('order-pizza', 'medium', 'mushroom')
+// console.log('Test console 3')
+// ================================================================================================
+
+// =================================== 22-Extending from Event-Emitter.js =========================
+// const PizzaShop = require('./pizza-shop')
+// const DrinkMachine = require('./drink-machine')
+
+// const  pizzaShop = new PizzaShop()
+// const drinkMachine = new DrinkMachine()
+
+// pizzaShop.on('order', (size, topping) => {
+//     console.log(`\nOrder Received, Backing a ${size} sized ${topping} flavoured pizza!`)
+//     // if(size === 'large') console.log(`Serving complimentary drink.`)
+//     drinkMachine.serverDrink(size)
+
+// })
+// pizzaShop.order('large', 'cheese')
+// pizzaShop.displayOrderNumber()
+
+// pizzaShop.order('small', 'mashroom')
+// pizzaShop.displayOrderNumber()
+
+
 // ================================================================================================
