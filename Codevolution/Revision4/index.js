@@ -153,3 +153,24 @@
 // =============================== 25-Asynchronous JavaScript.js ==================================
 
 // ================================================================================================
+
+// ================================ 26-fs Module.js ===============================================
+const fs = require('node:fs')
+// const fileContent = fs.readFileSync('./file.txt')
+console.log('first')
+fs.readFile('./file.txt', 'utf-8', (error, data) => {
+    if (error) throw error
+    console.log('data: ', data)
+})
+console.log('second')
+
+const fileContent = fs.readFileSync('./file.txt', 'utf-8')
+console.log('fileContent: ', fileContent)
+console.log('third')
+
+fs.writeFileSync('./greet.txt', 'Hello babes')
+fs.writeFile('./greet.txt', '\nHello cutie', {flag : 'a'}, (err) => {
+    if (err) throw err
+    console.log('File written')
+})
+// ================================================================================================
