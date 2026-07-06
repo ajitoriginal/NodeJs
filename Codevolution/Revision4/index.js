@@ -141,11 +141,15 @@
 // ================================================================================================
 
 // ================================ 24-Streams & Buffers.js =======================================
-const buffer = new Buffer.from('Vishwas', 'utf-8')
+// const buffer = new Buffer.from('Vishwas', 'utf-8')
 
 // buffer.write("Code")
-buffer.write("Codevolution")
-console.log("buffer: ", buffer)
-console.log("buffer.toString(): ", buffer.toString())
-console.log("buffer.toJSON(): ", buffer.toJSON())
+// buffer.write("Codevolution")
+// console.log("buffer: ", buffer)
+// console.log("buffer.toString(): ", buffer.toString())
+// console.log("buffer.toJSON(): ", buffer.toJSON())
+// ================================================================================================
+
+// =============================== 25-Asynchronous JavaScript.js ==================================
+
 // ================================================================================================
