@@ -155,22 +155,48 @@
 // ================================================================================================
 
 // ================================ 26-fs Module.js ===============================================
-const fs = require('node:fs')
-// const fileContent = fs.readFileSync('./file.txt')
-console.log('first')
-fs.readFile('./file.txt', 'utf-8', (error, data) => {
-    if (error) throw error
-    console.log('data: ', data)
-})
-console.log('second')
+// const fs = require('node:fs')
+// // const fileContent = fs.readFileSync('./file.txt')
+// console.log('first')
+// fs.readFile('./file.txt', 'utf-8', (error, data) => {
+//     if (error) throw error
+//     console.log('data: ', data)
+// })
+// console.log('second')
 
-const fileContent = fs.readFileSync('./file.txt', 'utf-8')
-console.log('fileContent: ', fileContent)
+// const fileContent = fs.readFileSync('./file.txt', 'utf-8')
+// console.log('fileContent: ', fileContent)
+// console.log('third')
+
+// fs.writeFileSync('./greet.txt', 'Hello babes')
+// fs.writeFile('./greet.txt', '\nHello cutie', {flag : 'a'}, (err) => {
+//     if (err) throw err
+//     console.log('File written')
+// })
+// ================================================================================================
+
+// ================================== 27-fs Promise Module.js =====================================
+const fs = require('node:fs/promises')
+
+// console.log('first')
+// fs.readFile('file.txt', 'utf-8')
+// .then(data => console.log('data: ', data))
+// .catch(err => console.error(err))
+// console.log('second')
+
+console.log('first')
+async function readFile() {
+    try {
+        console.log('second')
+        const data = await fs.readFile('file.txt', 'utf-8')
+        console.log('data: ', data)
+    } catch (err) {
+        console.error(err)
+    }
+}
+
 console.log('third')
 
-fs.writeFileSync('./greet.txt', 'Hello babes')
-fs.writeFile('./greet.txt', '\nHello cutie', {flag : 'a'}, (err) => {
-    if (err) throw err
-    console.log('File written')
-})
+readFile()
+console.log('forth')
 // ================================================================================================
