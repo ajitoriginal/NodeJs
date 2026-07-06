@@ -98,3 +98,22 @@
 
 // higherOrderFn(greet)
 // ================================================================================================
+
+// ======================================= 21-Events Module.js ====================================
+const EventEmitter = require("node:events")
+const emitter = new EventEmitter()
+
+emitter.on('order-pizza', (size, flavour) => {
+    console.log(`Order Received, Backing a ${size} sized ${flavour} flavoured pizza!`)
+})
+emitter.on('order-pizza', (size) => {
+    if(size === 'large') console.log(`Serving complimentary drink.\n`)
+})
+
+console.log('Test console 1')
+// emitter.emit('order-pizza')
+emitter.emit('order-pizza', 'large', 'cheese')
+console.log('Test console 2')
+emitter.emit('order-pizza', 'medium', 'mushroom')
+console.log('Test console 3')
+// ================================================================================================
