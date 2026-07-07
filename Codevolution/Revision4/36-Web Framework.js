@@ -1,0 +1,25 @@
+// A framework simply abstracts the lower level code allowing you to focus on the requirements
+// than the code itself
+
+// For example, Angular, React and Vue are all framework/libraries that help you build user interfaces
+// without having to rely on the lower level DOM API in JavaScript
+
+// There are frameworks to build web or mobile applications with having to rely on the HTTP module
+// in Node.js
+// Ex: express, nest, hapi, koa and sails
+
+// They build on top of the HTTP module making it easier for you to implement all the features
+
+// SECTION SUMMARY
+// Built-in modules
+// Path Module
+// Callback pattern
+// Events module
+// EventEmitter class
+// Character sets and encoding
+// Streams and buffers
+// Asynchronous JavaScript
+// fs module
+// Streams
+// Pipes
+// HTTP module
