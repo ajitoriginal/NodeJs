@@ -176,7 +176,7 @@
 // ================================================================================================
 
 // ================================== 27-fs Promise Module.js =====================================
-const fs = require('node:fs/promises')
+// const fs = require('node:fs/promises')
 
 // console.log('first')
 // fs.readFile('file.txt', 'utf-8')
@@ -184,19 +184,30 @@ const fs = require('node:fs/promises')
 // .catch(err => console.error(err))
 // console.log('second')
 
-console.log('first')
-async function readFile() {
-    try {
-        console.log('second')
-        const data = await fs.readFile('file.txt', 'utf-8')
-        console.log('data: ', data)
-    } catch (err) {
-        console.error(err)
-    }
-}
+// console.log('first')
+// async function readFile() {
+//     try {
+//         console.log('second')
+//         const data = await fs.readFile('file.txt', 'utf-8')
+//         console.log('data: ', data)
+//     } catch (err) {
+//         console.error(err)
+//     }
+// }
 
-console.log('third')
+// console.log('third')
 
-readFile()
-console.log('forth')
+// readFile()
+// console.log('forth')
+// ================================================================================================
+
+// ============================= 28-Streams.js ====================================================
+const fs = require("node:fs")
+const readableStream = fs.createReadStream("./file.txt", {encoding: "utf-8"})
+// const readableStream = fs.createReadStream("./file.txt", {encoding: "utf-8", highWaterMark : 2})
+const writeableStream = fs.createWriteStream("./file2.txt")
+readableStream.on("data", (chunk) => {
+    console.log(chunk)
+    writeableStream.write(chunk)
+})
 // ================================================================================================
