@@ -291,6 +291,25 @@
 // ================================================================================================
 
 // ============================= 34-HTML Template.js ==============================================
+// const http = require("node:http")
+// const fs = require("node:fs")
+
+// const PORT = 3000
+
+// const server = http.createServer((req, res) => {
+//     const name = 'Tony'
+//     res.writeHead(200, {"Content-Type": "text/html"})
+//     let htmlContent = fs.readFileSync('./index.html', 'utf-8')
+//     htmlContent = htmlContent.replace("{{name}}", name)
+//     res.end(htmlContent)
+// })
+
+// server.listen(PORT, () => {
+//     console.log(`Server is running on PORT ${PORT}`)
+// })
+// ================================================================================================
+
+// ================================== 35-HTTP Routing.js ==========================================
 const http = require("node:http")
 const fs = require("node:fs")
 
@@ -298,14 +317,37 @@ const PORT = 3000
 
 const server = http.createServer((req, res) => {
     const name = 'Tony'
-    
-    res.writeHead(200, {"Content-Type": "text/html"})
-    let htmlContent = fs.readFileSync('./index.html', 'utf-8')
-    htmlContent = htmlContent.replace("{{name}}", name)
-    res.end(htmlContent)
+    console.log("req.method: ", req.method)
+    console.log("req.url: ", req.url)
+    const endpoint = req.url
+    if(endpoint === "/") {
+        res.writeHead(200, {"Content-Type": "text/plain"})
+        res.end("Home Page")
+    } else if(endpoint === '/about') {
+        res.writeHead(200, {"Content-Type": "text/plain"})
+        res.end("About Page")
+    } else if(endpoint === '/contact') {
+        res.writeHead(200, {"Content-Type": "text/plain"})
+        res.end("Contact Page")
+    } else if(endpoint === '/api') {
+        res.writeHead(200, {"Content-Type": "application/json"})
+        const superHero = {
+            firstName : "Tony",
+            lastName : "Stark"
+        }
+        res.end(JSON.stringify(superHero))
+    } else {
+        res.writeHead(404)
+        res.end("Invalid Page")
+    }
+    // res.writeHead(200, {"Content-Type": "text/html"})
+    // let htmlContent = fs.readFileSync('./index.html', 'utf-8')
+    // htmlContent = htmlContent.replace("{{name}}", name)
+    // res.end(htmlContent)
 })
 
 server.listen(PORT, () => {
     console.log(`Server is running on PORT ${PORT}`)
 })
+
 // ================================================================================================
