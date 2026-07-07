@@ -265,3 +265,27 @@
 // })
 
 // ================================================================================================
+
+// ==================================== 33-HTML Response.js =======================================
+const http = require("node:http")
+const fs = require("node:fs")
+const path = require("node:path")
+
+const PORT = 3000
+
+const server = http.createServer((req, res) => {
+    
+    res.writeHead(200, {"Content-Type": "text/html"})
+    // const htmlContent = fs.readFileSync('./index.html', 'utf-8')
+    // res.end("<h1>Hello buddies!</h1>")
+    // res.end(htmlContent)
+    // fs.createReadStream('./index.html').pipe(res)
+    // fs.createReadStream(__dirname + '/index.html').pipe(res)
+    const filePath = path.join(__dirname, 'index.html')
+    fs.createReadStream(filePath).pipe(res)
+})
+
+server.listen(PORT, () => {
+    console.log(`Server is running on PORT ${PORT}`)
+})
+// ================================================================================================
