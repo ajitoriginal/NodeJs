@@ -213,9 +213,55 @@
 // ================================================================================================
 
 // ==================================== 29-Pipes.js ===============================================
-const fs = require("node:fs")
-const readableStream = fs.createReadStream("./file.txt", {encoding: "utf-8"})
-const writeableStream = fs.createWriteStream("./file2.txt")
-readableStream.pipe(writeableStream)
+// const fs = require("node:fs")
+// const readableStream = fs.createReadStream("./file.txt", {encoding: "utf-8"})
+// const writeableStream = fs.createWriteStream("./file2.txt")
+// readableStream.pipe(writeableStream)
+
+// ================================================================================================
+
+// =================================== 31-Creating a Node Server.js ===============================
+// const http = require("node:http")
+
+// const PORT = 3000
+
+// const server = http.createServer((req, res) => {
+//     console.log("req: ", req)
+//     console.log(Object.keys(req).length)
+   
+//     res.writeHead(200, {"Content-Type": "text/plain"})
+//     res.end("Hello buddies!")
+// })
+
+// server.listen(PORT, () => {
+//     console.log(`Server is running on PORT ${PORT}`)
+// })
+// ================================================================================================
+
+// ==================================== 32-JSON Response.js =======================================
+// const http = require("node:http")
+
+// const PORT = 3000
+
+// const server = http.createServer((req, res) => {
+//     // console.log("req: ", req)
+//     // console.log(Object.keys(req).length)
+//     const superHero = {
+//         firstName : "Tony",
+//         lastName : "Stark"
+//     }
+//     // res.writeHead(200, {"Content-Type": "text/plain"})
+//     res.writeHead(200, {"Content-Type": "application/json"})
+//     // res.end("Hello buddies!")
+//     const stringify = JSON.stringify(superHero)
+//     const parse = JSON.parse(stringify)
+//     res.end(JSON.stringify(superHero))
+//     console.log("stringify: ", stringify )
+//     console.log("parse: ", parse )
+// })
+
+// server.listen(PORT, () => {
+//     console.log(`Server is running on PORT ${PORT}`)
+// })
 
 // ================================================================================================
