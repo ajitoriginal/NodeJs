@@ -202,12 +202,20 @@
 // ================================================================================================
 
 // ============================= 28-Streams.js ====================================================
+// const fs = require("node:fs")
+// const readableStream = fs.createReadStream("./file.txt", {encoding: "utf-8"})
+// const readableStream = fs.createReadStream("./file.txt", {encoding: "utf-8", highWaterMark : 2})
+// const writeableStream = fs.createWriteStream("./file2.txt")
+// readableStream.on("data", (chunk) => {
+//     console.log(chunk)
+//     writeableStream.write(chunk)
+// })
+// ================================================================================================
+
+// ==================================== 29-Pipes.js ===============================================
 const fs = require("node:fs")
 const readableStream = fs.createReadStream("./file.txt", {encoding: "utf-8"})
-// const readableStream = fs.createReadStream("./file.txt", {encoding: "utf-8", highWaterMark : 2})
 const writeableStream = fs.createWriteStream("./file2.txt")
-readableStream.on("data", (chunk) => {
-    console.log(chunk)
-    writeableStream.write(chunk)
-})
+readableStream.pipe(writeableStream)
+
 // ================================================================================================
